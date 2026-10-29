@@ -1,0 +1,1038 @@
+/* ==========================================================================
+   PÁGINA DE VENDAS DIRETA (LOW TICKET) - CAIXINHAS DE NATAL R$ 19,90
+   Foco 100% em Conversão de Tráfego Pago (Instagram & Facebook Ads)
+   Inspirada na Estrutura Comercial de Alta Conversão da Referência
+   ========================================================================== */
+
+:root {
+  --background: #fffdfa;
+  --foreground: #44251f;
+  
+  --primary: #c5283d;
+  --primary-hover: #a91b2c;
+  --secondary: #8b1e22;
+  --wine-dark: #6b2526;
+  
+  --purchase: #16a34a;
+  --purchase-hover: #15803d;
+  --purchase-glow: rgba(22, 163, 74, 0.22);
+  
+  --card: #ffffff;
+  --tint-bg: #fffaf3;
+  --tint-bg-alt: #fef5ea;
+  
+  --border: #eadcd1;
+  --border-light: #f3e9e0;
+  
+  --muted: #64748b;
+  --muted-text: #7c5c54;
+  
+  --shadow-card: 0 8px 24px rgba(68, 37, 31, 0.07);
+  --shadow-strong: 0 16px 36px rgba(68, 37, 31, 0.12);
+  --shadow-button: 0 0 0 8px var(--purchase-glow);
+  
+  --font-main: 'Nunito', system-ui, -apple-system, sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 999px;
+  
+  --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reset Global */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--background);
+  color: var(--foreground);
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.page-width {
+  width: 100%;
+  max-width: 1060px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* ==========================================================================
+   1. FAIXA SUPERIOR TEMÁTICA
+   ========================================================================== */
+.top-promo-banner {
+  background: linear-gradient(90deg, #581c20 0%, var(--wine-dark) 50%, #581c20 100%);
+  color: #fce7cf;
+  font-size: 0.8rem;
+  padding: 8px 16px;
+  border-bottom: 1px solid rgba(250, 204, 21, 0.2);
+}
+
+.top-promo-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  max-width: 1060px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.top-promo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(250, 204, 21, 0.4);
+  padding: 3px 12px;
+  border-radius: var(--radius-full);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #fef08a;
+  white-space: nowrap;
+}
+
+.top-promo-badge strong {
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.top-promo-badge i {
+  color: #facc15;
+  font-size: 0.8rem;
+}
+
+.top-promo-separator {
+  color: rgba(254, 240, 138, 0.6);
+}
+
+.top-promo-message {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #fce7cf;
+  font-size: 0.78rem;
+}
+
+/* ==========================================================================
+   2. HERO SECTION (PRIMEIRA DOBRA DE IMPACTO)
+   ========================================================================== */
+.hero {
+  text-align: center;
+  padding-top: 28px;
+  padding-bottom: 36px;
+}
+
+.hero-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #fdf2f2;
+  color: var(--secondary);
+  border: 1px solid rgba(139, 30, 34, 0.18);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-size: 2.35rem;
+  font-weight: 900;
+  line-height: 1.2;
+  color: var(--wine-dark);
+  max-width: 780px;
+  margin: 0 auto 14px;
+}
+
+.hero h1 span {
+  color: var(--primary);
+}
+
+.hero-description {
+  font-size: 1.08rem;
+  color: var(--muted-text);
+  max-width: 620px;
+  margin: 0 auto 20px;
+  line-height: 1.55;
+}
+
+/* Hero Showcase Image */
+.hero-mockup-wrapper {
+  max-width: 760px;
+  margin: 0 auto 22px;
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(68, 37, 31, 0.14);
+  border: 1px solid var(--border);
+}
+
+.hero-mockup-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Preço e CTA Hero */
+.hero-cta-area {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-price-tag {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--muted-text);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+.hero-price-value {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--wine-dark);
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.hero-price-value span {
+  color: var(--primary);
+}
+
+/* Botão de Compra Primário (Padrão Low Ticket Verde Vibrante) */
+.purchase-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--purchase);
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 16px 36px;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-button);
+  transition: var(--transition);
+  cursor: pointer;
+  min-height: 52px;
+}
+
+.purchase-button:hover {
+  background: var(--purchase-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 12px var(--purchase-glow);
+}
+
+.purchase-button:active {
+  transform: translateY(0);
+}
+
+/* Trust Row Abaixo do CTA */
+.trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px 18px;
+  margin-top: 20px;
+  max-width: 680px;
+}
+
+.trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--muted-text);
+  background: rgba(254, 245, 234, 0.7);
+  border: 1px solid var(--border-light);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  line-height: 1.3;
+}
+
+.trust-item i {
+  color: var(--purchase);
+  font-size: 0.88rem;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   3. SEÇÃO MARQUEE (CARROSSEL INFINITO DE MOLDES REAIS)
+   ========================================================================== */
+.section {
+  padding: 56px 0;
+}
+
+.section-tint {
+  background-color: var(--tint-bg);
+}
+
+.section-tint-alt {
+  background-color: var(--tint-bg-alt);
+}
+
+.section-header-center {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 32px;
+}
+
+.eyebrow {
+  display: block;
+  color: var(--primary);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-size: 1.95rem;
+  font-weight: 900;
+  color: var(--wine-dark);
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--muted-text);
+  line-height: 1.5;
+}
+
+/* Carrossel Infinito (Marquee) */
+.marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+  margin: 12px 0;
+  user-select: none;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-slide 38s linear infinite;
+}
+
+.marquee-track.reverse {
+  animation-direction: reverse;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.marquee-set {
+  display: flex;
+  gap: 16px;
+  padding-right: 16px;
+}
+
+.marquee-item {
+  width: 200px;
+  height: 270px;
+  border-radius: var(--radius-md);
+  background: #ffffff;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.marquee-item:hover {
+  transform: translateY(-4px);
+}
+
+.marquee-item img {
+  width: 100%;
+  height: 205px;
+  object-fit: cover;
+  background: #fff;
+}
+
+.marquee-item-caption {
+  padding: 8px 10px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--wine-dark);
+  text-align: center;
+  background: #fbf6f0;
+  border-top: 1px solid var(--border-light);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@keyframes marquee-slide {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.hero-buy-action {
+  text-align: center;
+  margin-top: 28px;
+}
+
+/* ==========================================================================
+   4. VITRINE DE PRODUTOS REAIS MONTADOS
+   ========================================================================== */
+.real-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+.showcase-card {
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+}
+
+.showcase-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-strong);
+  border-color: #d8b8a5;
+}
+
+.showcase-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.showcase-card-body {
+  padding: 18px;
+}
+
+.showcase-badge {
+  display: inline-block;
+  background: #fdf2f2;
+  color: var(--primary);
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.showcase-card-title {
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: var(--wine-dark);
+  margin-bottom: 6px;
+}
+
+.showcase-card-desc {
+  font-size: 0.85rem;
+  color: var(--muted-text);
+  line-height: 1.45;
+  margin-bottom: 12px;
+}
+
+.showcase-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border-light);
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: var(--muted-text);
+}
+
+.showcase-card-footer i {
+  color: var(--purchase);
+  margin-right: 4px;
+}
+
+/* ==========================================================================
+   5. DORES E IDENTIFICAÇÃO ("SE VOCÊ JÁ PASSOU POR ISSO...")
+   ========================================================================== */
+.pains-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.pain-item {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  box-shadow: var(--shadow-card);
+}
+
+.pain-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #fee2e2;
+  color: #dc2626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.pain-text {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--wine-dark);
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   6. PARA QUEM É IDEAL
+   ========================================================================== */
+.ideal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+}
+
+.ideal-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+}
+
+.ideal-icon {
+  width: 50px;
+  height: 50px;
+  background: #fdf2f2;
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin: 0 auto 14px;
+}
+
+.ideal-title {
+  font-size: 1rem;
+  font-weight: 900;
+  color: var(--wine-dark);
+  margin-bottom: 8px;
+}
+
+.ideal-desc {
+  font-size: 0.84rem;
+  color: var(--muted-text);
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   7. SEÇÃO DE OFERTA COMERCIAL (BOX DE VENDA FORTE)
+   ========================================================================== */
+.offer-section-box {
+  max-width: 620px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 2px solid var(--secondary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-strong);
+  overflow: hidden;
+  position: relative;
+}
+
+.offer-ribbon {
+  background: var(--secondary);
+  color: #ffffff;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.offer-box-content {
+  padding: 28px;
+  text-align: center;
+}
+
+.offer-box-title {
+  font-size: 1.65rem;
+  font-weight: 900;
+  color: var(--wine-dark);
+  margin-bottom: 8px;
+}
+
+.offer-box-subtitle {
+  font-size: 0.92rem;
+  color: var(--muted-text);
+  margin-bottom: 20px;
+}
+
+/* Linha com miniaturas dos modelos reais no card da oferta */
+.offer-preview-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.offer-preview-thumb {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  aspect-ratio: 1/1;
+  background: var(--tint-bg);
+}
+
+.offer-preview-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.offer-preview-thumb:hover img {
+  transform: scale(1.08);
+}
+
+.offer-items-list {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 26px;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  padding: 16px 0;
+}
+
+.offer-items-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.offer-items-list li:last-child {
+  margin-bottom: 0;
+}
+
+.offer-items-list li i {
+  color: var(--purchase);
+  font-size: 1rem;
+  margin-top: 2px;
+}
+
+.offer-price-call {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--muted-text);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+
+.offer-price-number {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--wine-dark);
+  line-height: 1;
+  margin-bottom: 18px;
+}
+
+.offer-price-number span {
+  color: var(--primary);
+}
+
+.offer-box-content .purchase-button {
+  width: 100%;
+}
+
+.offer-guarantee-note {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--muted-text);
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+/* ==========================================================================
+   8. NATAL EM FAMÍLIA (EMOCIONAL & CARINHO)
+   ========================================================================== */
+.family-wrap {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 36px;
+}
+
+.family-copy h2 {
+  font-size: 1.95rem;
+  font-weight: 900;
+  color: var(--wine-dark);
+  margin-bottom: 14px;
+  line-height: 1.25;
+}
+
+.family-copy p {
+  font-size: 0.96rem;
+  color: var(--muted-text);
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+.family-photo img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border);
+}
+
+/* ==========================================================================
+   9. GARANTIA 7 DIAS
+   ========================================================================== */
+.guarantee-wrap {
+  max-width: 680px;
+  margin: 0 auto;
+  background: #f5f8f1;
+  border: 1px solid #d4e2c8;
+  border-radius: var(--radius-md);
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.guarantee-icon-box {
+  width: 64px;
+  height: 64px;
+  background: var(--purchase);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.guarantee-text h3 {
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: #1b4b32;
+  margin-bottom: 4px;
+}
+
+.guarantee-text p {
+  font-size: 0.88rem;
+  color: #3b5a45;
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   10. PERGUNTAS FREQUENTES (FAQ)
+   ========================================================================== */
+.faq-list {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.faq-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.faq-header {
+  width: 100%;
+  padding: 16px 20px;
+  text-align: left;
+  background: none;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--wine-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  gap: 12px;
+}
+
+.faq-header i {
+  color: var(--secondary);
+  transition: transform 0.25s ease;
+  font-size: 0.85rem;
+}
+
+.faq-card.active .faq-header i {
+  transform: rotate(180deg);
+}
+
+.faq-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 20px;
+  font-size: 0.88rem;
+  color: var(--muted-text);
+  line-height: 1.55;
+}
+
+.faq-card.active .faq-body {
+  max-height: 250px;
+  padding-bottom: 18px;
+}
+
+/* ==========================================================================
+   11. FOOTER
+   ========================================================================== */
+.site-footer {
+  background: #2a1614;
+  color: #d1b8b3;
+  padding: 38px 0 22px;
+  text-align: center;
+  font-size: 0.82rem;
+}
+
+.site-footer p {
+  margin-bottom: 6px;
+}
+
+/* ==========================================================================
+   12. BOTÃO FIXO MOBILE (FLOATING BAR)
+   ========================================================================== */
+.mobile-sticky-cta {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(8px);
+  padding: 10px 18px;
+  padding-bottom: max(12px, env(safe-area-inset-bottom));
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -4px 18px rgba(0, 0, 0, 0.12);
+  z-index: 1000;
+  transform: translateY(110%);
+  transition: transform 0.3s ease;
+}
+
+.mobile-sticky-cta.show {
+  transform: translateY(0);
+}
+
+.mobile-sticky-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.mobile-sticky-cta .purchase-button {
+  padding: 12px 22px;
+  font-size: 0.88rem;
+  min-height: 44px;
+  width: 100%;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (MOBILE & TABLET)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .top-promo-banner {
+    padding: 6px 10px;
+    font-size: 0.72rem;
+  }
+
+  .top-promo-inner {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .top-promo-badge {
+    font-size: 0.72rem;
+    padding: 2px 10px;
+  }
+
+  .top-promo-message {
+    font-size: 0.7rem;
+    line-height: 1.35;
+  }
+
+  .hero {
+    padding-top: 16px;
+    padding-bottom: 24px;
+  }
+
+  .hero-label {
+    margin-bottom: 10px;
+    font-size: 0.72rem;
+    padding: 4px 12px;
+  }
+
+  .hero h1 {
+    font-size: 1.55rem;
+    line-height: 1.22;
+    margin-bottom: 10px;
+    max-width: 420px;
+  }
+  
+  .hero-description {
+    font-size: 0.88rem;
+    line-height: 1.45;
+    margin-bottom: 14px;
+    max-width: 380px;
+  }
+
+  .hero-mockup-wrapper {
+    max-width: 460px;
+    margin-bottom: 14px;
+    border-radius: 14px;
+  }
+
+  .hero-cta-area {
+    margin-top: 8px;
+  }
+
+  .hero-price-tag {
+    font-size: 0.78rem;
+    margin-bottom: 2px;
+  }
+
+  .hero-price-value {
+    font-size: 1.95rem;
+    margin-bottom: 10px;
+  }
+
+  .purchase-button {
+    font-size: 0.95rem;
+    padding: 14px 24px;
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .trust-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .trust-item {
+    font-size: 0.76rem;
+    padding: 5px 12px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .section {
+    padding: 34px 0;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .family-wrap {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .guarantee-wrap {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mobile-sticky-cta {
+    display: block;
+  }
+
+  body {
+    padding-bottom: calc(65px + env(safe-area-inset-bottom));
+  }
+}
+
+@media (max-width: 400px) {
+  .hero h1 {
+    font-size: 1.42rem;
+  }
+
+  .hero-description {
+    font-size: 0.84rem;
+  }
+
+  .hero-price-value {
+    font-size: 1.8rem;
+  }
+
+  .purchase-button {
+    font-size: 0.9rem;
+    padding: 13px 18px;
+  }
+}

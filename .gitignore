@@ -1,0 +1,19 @@
+# Backups de desenvolvimento
+backup_etapa1/
+backup_etapa2/
+
+# Arquivos de referência baixados externamente
+referencia_downloaded.html
+referencia_styles.css
+
+# Servidor local
+serve.ps1
+
+# Logs
+*.log
+
+# Sistema operacional
+Thumbs.db
+.DS_Store
+desktop.ini
+
