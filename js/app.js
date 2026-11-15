@@ -3,12 +3,12 @@
  * Edite aqui as informações principais da oferta e o link do checkout.
  */
 const CONFIG = {
-  // ATENÇÃO: Insira aqui a URL real do seu checkout (Hotmart, Kiwify, Eduzz, CartPanda, etc.)
-  // Exemplo: "https://pay.kiwify.com.br/SEU_CHECKOUT"
-  CHECKOUT_URL: "https://pay.lowify.com.br/checkout.php?product_id=RhJVQf",
+  // Checkout da Coleção COMPLETA — R$ 19,90
+  CHECKOUT_URL_FULL:  "https://pay.lowify.com.br/checkout.php?product_id=UQDN0p",
 
-  // Informações da Coleção
-  PRICE: "19,90",
+  // Checkout da Coleção BÁSICA — R$ 9,90
+  CHECKOUT_URL_BASIC: "https://pay.lowify.com.br/go.php?offer=cffc453c",
+
   PRODUCT_NAME: "Coleção de Moldes de Caixinhas de Natal",
   WARRANTY_DAYS: 7
 };
@@ -27,12 +27,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // 1. Manter e repassar parâmetros UTM da URL ao checkout
   const currentParams = window.location.search;
   
-  const getFullCheckoutUrl = () => {
-    if (!CONFIG.CHECKOUT_URL || CONFIG.CHECKOUT_URL === "PENDENTE_CONFIGURACAO_CHECKOUT") {
-      return null;
-    }
+  const getFullCheckoutUrl = (baseUrl) => {
+    if (!baseUrl) return null;
     try {
-      const url = new URL(CONFIG.CHECKOUT_URL);
+      const url = new URL(baseUrl);
       if (currentParams) {
         const incomingParams = new URLSearchParams(currentParams);
         incomingParams.forEach((val, key) => {
@@ -42,9 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
       return url.toString();
     } catch (e) {
       if (currentParams) {
-        return CONFIG.CHECKOUT_URL + (CONFIG.CHECKOUT_URL.includes("?") ? "&" : "?") + currentParams.substring(1);
+        return baseUrl + (baseUrl.includes("?") ? "&" : "?") + currentParams.substring(1);
       }
-      return CONFIG.CHECKOUT_URL;
+      return baseUrl;
     }
   };
 
@@ -60,12 +58,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 3. Configurar especificamente o botão de compra final da oferta (data-buy-btn)
+  // 3. Configurar botões de compra (data-buy-btn) — suportam data-plan="basic" ou "full"
   const buyButtons = document.querySelectorAll("[data-buy-btn]");
   buyButtons.forEach(btn => {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
-      const targetUrl = getFullCheckoutUrl();
+      const plan = btn.getAttribute("data-plan");
+      let baseUrl;
+      if (plan === "basic") {
+        baseUrl = CONFIG.CHECKOUT_URL_BASIC;
+      } else {
+        baseUrl = CONFIG.CHECKOUT_URL_FULL;
+      }
+      const targetUrl = getFullCheckoutUrl(baseUrl);
       if (!targetUrl) {
         openCheckoutAlertModal();
       } else {

@@ -1036,3 +1036,166 @@ button {
     padding: 13px 18px;
   }
 }
+
+
+/* ============================================================
+   SEÇÃO DE OFERTA — DOIS PLANOS (Básico R$9,90 / Completo R$19,90)
+   ============================================================ */
+
+.offer-section-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+/* Grid dos dois cards */
+.offer-plans-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 780px;
+  margin: 0 auto 24px;
+}
+
+/* Card individual */
+.offer-plan-card {
+  background: #fff;
+  border: 2px solid #e8d5cb;
+  border-radius: 20px;
+  padding: 28px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+/* Card em destaque (Completo) */
+.offer-plan-card.featured {
+  border-color: #8B0000;
+  background: linear-gradient(160deg, #fff 0%, #fff9f8 100%);
+  box-shadow: 0 8px 36px rgba(139, 0, 0, 0.13);
+}
+
+/* Badge "MAIS COMPLETO" */
+.offer-plan-badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #8B0000, #c0392b);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 5px 18px;
+  border-radius: 999px;
+  white-space: nowrap;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Nome do plano */
+.offer-plan-name {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #4a1c1c;
+  margin-bottom: 6px;
+  margin-top: 10px;
+}
+
+.offer-plan-price-label {
+  font-size: 0.75rem;
+  color: #9c6b6b;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 2px;
+}
+
+.offer-plan-price {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #8B0000;
+  margin: 0 0 20px;
+  line-height: 1;
+}
+
+.offer-plan-price span {
+  font-size: 2.6rem;
+}
+
+/* Lista de itens do plano */
+.offer-plan-items {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 22px;
+  text-align: left;
+  width: 100%;
+  flex: 1;
+}
+
+.offer-plan-items li {
+  font-size: 0.86rem;
+  color: #5a3a3a;
+  padding: 7px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  border-bottom: 1px solid #f3e8e4;
+  line-height: 1.4;
+}
+
+.offer-plan-items li:last-child {
+  border-bottom: none;
+}
+
+.offer-plan-items li i {
+  color: #c0392b;
+  flex-shrink: 0;
+  margin-top: 2px;
+  font-size: 0.85rem;
+}
+
+/* Botão outline (Básico) */
+.purchase-button--outline {
+  background: transparent !important;
+  border: 2px solid #8B0000 !important;
+  color: #8B0000 !important;
+  box-shadow: none !important;
+}
+
+.purchase-button--outline:hover,
+.purchase-button--outline:active {
+  background: #8B0000 !important;
+  color: #fff !important;
+}
+
+/* Garantia abaixo dos planos */
+.offer-guarantee-bottom {
+  text-align: center;
+  font-size: 0.82rem;
+  color: #7c5c54;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.offer-guarantee-bottom i {
+  color: #16a34a;
+}
+
+/* Responsivo — mobile: empilha os cards */
+@media (max-width: 600px) {
+  .offer-plans-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+
+  .offer-plan-card.featured {
+    order: -1; /* Destaque aparece primeiro no mobile */
+  }
+
+  .offer-plan-price span {
+    font-size: 2.2rem;
+  }
+}

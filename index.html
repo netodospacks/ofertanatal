@@ -67,8 +67,8 @@
 
       <!-- Preço e Botão de Compra Primário -->
       <div class="hero-cta-area">
-        <div class="hero-price-tag">Por apenas</div>
-        <div class="hero-price-value">R$ <span>19,90</span></div>
+        <div class="hero-price-tag">A partir de</div>
+        <div class="hero-price-value">R$ <span>9,90</span></div>
 
         <!-- Botão 1: Hero (Rola até a oferta) -->
         <a href="#oferta" class="purchase-button" data-scroll-offer>
@@ -148,7 +148,7 @@
       <!-- Botão 2: Após Marquee (Rola até a oferta) -->
       <div class="hero-buy-action">
         <a href="#oferta" class="purchase-button" data-scroll-offer>
-          COMPRAR AGORA POR R$ 19,90
+          VER AS OFERTAS — A PARTIR DE R$ 9,90
           <i class="fas fa-arrow-right"></i>
         </a>
       </div>
@@ -277,51 +277,77 @@
       </div>
     </section>
 
-    <!-- 7. SEÇÃO DE OFERTA COMERCIAL (BOX DE VENDA FORTE R$ 19,90) -->
+    <!-- 7. SEÇÃO DE OFERTA COMERCIAL - DOIS PLANOS -->
     <section class="section section-tint-alt" id="oferta">
       <div class="page-width">
-        <div class="offer-section-box">
-          <div class="offer-ribbon">OFERTA ESPECIAL DE NATAL • ARQUIVOS DIGITAIS</div>
-          <div class="offer-box-content">
-            <h2 class="offer-box-title">Coleção Completa de Caixinhas de Natal</h2>
-            <p class="offer-box-subtitle">Comece a preparar seus presentes com uma coleção criada para facilitar sua criatividade.</p>
+        <div class="offer-section-header">
+          <div class="offer-ribbon">OFERTA ESPECIAL DE NATAL • ESCOLHA SEU PLANO</div>
+          <h2 class="offer-box-title">Escolha a coleção ideal para você</h2>
+          <p class="offer-box-subtitle">Arquivos digitais prontos para imprimir, recortar e montar em casa.</p>
+        </div>
 
-            <!-- Miniatura do produto na oferta -->
-            <div class="offer-preview-row">
-              <div class="offer-preview-thumb">
-                <img src="assets/images/real/caixa_bis_montada.jpg" alt="Caixinha de Natal" loading="lazy">
-              </div>
-              <div class="offer-preview-thumb">
-                <img src="assets/images/real/caixa_envelope_sabonete.jpg" alt="Caixa Envelope" loading="lazy">
-              </div>
-              <div class="offer-preview-thumb">
-                <img src="assets/images/real/porta_3_bis.jpg" alt="Porta Doces" loading="lazy">
-              </div>
-              <div class="offer-preview-thumb">
-                <img src="assets/images/real/cinta_panetone.jpg" alt="Cinta Panetone" loading="lazy">
-              </div>
-            </div>
-
-            <ul class="offer-items-list">
-              <li><i class="fas fa-check-circle"></i> Moldes temáticos em formato A4 prontos para imprimir</li>
-              <li><i class="fas fa-check-circle"></i> Modelos variados: caixas de doces, envelopes com visor, cintas e porta mimos</li>
-              <li><i class="fas fa-check-circle"></i> Fácil de recortar com tesoura ou estilete comum (dispensa máquinas caras)</li>
-              <li><i class="fas fa-check-circle"></i> Imprima quantas vezes quiser em casa ou na gráfica de sua preferência</li>
-              <li><i class="fas fa-check-circle"></i> Envio automático para o seu e-mail logo após a confirmação do pagamento</li>
-            </ul>
-
-            <div class="offer-price-call">POR APENAS</div>
-            <div class="offer-price-number">R$ <span>19,90</span></div>
-
-            <!-- Botão 3: Oferta Principal -->
-            <a href="#checkout" class="purchase-button" data-buy-btn>
-              QUERO COMPRAR POR R$ 19,90
-              <i class="fas fa-arrow-right"></i>
-            </a>
-
-            <span class="offer-guarantee-note"><i class="fas fa-lock"></i> Pagamento único • Sem mensalidades • Acesso imediato no e-mail</span>
+        <!-- Preview visual das fotos -->
+        <div class="offer-preview-row">
+          <div class="offer-preview-thumb">
+            <img src="assets/images/real/caixa_bis_montada.jpg" alt="Caixinha de Natal" loading="lazy">
+          </div>
+          <div class="offer-preview-thumb">
+            <img src="assets/images/real/caixa_envelope_sabonete.jpg" alt="Caixa Envelope" loading="lazy">
+          </div>
+          <div class="offer-preview-thumb">
+            <img src="assets/images/real/porta_3_bis.jpg" alt="Porta Doces" loading="lazy">
+          </div>
+          <div class="offer-preview-thumb">
+            <img src="assets/images/real/cinta_panetone.jpg" alt="Cinta Panetone" loading="lazy">
           </div>
         </div>
+
+        <!-- Cards dos dois planos -->
+        <div class="offer-plans-grid">
+
+          <!-- Plano Básico — R$ 9,90 -->
+          <div class="offer-plan-card">
+            <div class="offer-plan-name">Coleção Básica</div>
+            <div class="offer-plan-price-label">por apenas</div>
+            <div class="offer-plan-price">R$ <span>9,90</span></div>
+            <ul class="offer-plan-items">
+              <li><i class="fas fa-check-circle"></i> Seleção de moldes natalinos em formato A4</li>
+              <li><i class="fas fa-check-circle"></i> Modelos de caixas de doces e porta mimos</li>
+              <li><i class="fas fa-check-circle"></i> Fácil de recortar com tesoura comum</li>
+              <li><i class="fas fa-check-circle"></i> Envio automático por e-mail após pagamento</li>
+            </ul>
+            <a href="#checkout" class="purchase-button purchase-button--outline" data-buy-btn data-plan="basic">
+              COMPRAR POR R$ 9,90
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <span class="offer-guarantee-note"><i class="fas fa-lock"></i> Pagamento único • Acesso imediato</span>
+          </div>
+
+          <!-- Plano Completo — R$ 19,90 (destaque) -->
+          <div class="offer-plan-card featured">
+            <div class="offer-plan-badge">⭐ MAIS COMPLETO</div>
+            <div class="offer-plan-name">Coleção Completa</div>
+            <div class="offer-plan-price-label">por apenas</div>
+            <div class="offer-plan-price">R$ <span>19,90</span></div>
+            <ul class="offer-plan-items">
+              <li><i class="fas fa-check-circle"></i> Todos os moldes temáticos em formato A4</li>
+              <li><i class="fas fa-check-circle"></i> Caixas, envelopes com visor, cintas e porta mimos</li>
+              <li><i class="fas fa-check-circle"></i> Fácil de recortar com tesoura comum</li>
+              <li><i class="fas fa-check-circle"></i> Imprima quantas vezes quiser em casa ou na gráfica</li>
+              <li><i class="fas fa-check-circle"></i> Envio automático por e-mail após pagamento</li>
+            </ul>
+            <a href="#checkout" class="purchase-button" data-buy-btn data-plan="full">
+              COMPRAR POR R$ 19,90
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <span class="offer-guarantee-note"><i class="fas fa-lock"></i> Pagamento único • Acesso imediato</span>
+          </div>
+
+        </div><!-- /.offer-plans-grid -->
+
+        <p class="offer-guarantee-bottom">
+          <i class="fas fa-shield-alt"></i> Garantia de 7 dias em ambos os planos — Reembolso integral se não gostar
+        </p>
       </div>
     </section>
 
@@ -336,7 +362,7 @@
           </p>
           <!-- Botão Seção Familiar (Rola até a oferta) -->
           <a href="#oferta" class="purchase-button" data-scroll-offer>
-            QUERO MINHA COLEÇÃO POR R$ 19,90
+            QUERO MINHA COLEÇÃO DE NATAL
             <i class="fas fa-arrow-right"></i>
           </a>
         </div>
@@ -417,7 +443,7 @@
             <i class="fas fa-chevron-down"></i>
           </button>
           <div class="faq-body">
-            <p>O pagamento é único! Você paga apenas R$ 19,90 uma única vez e tem acesso à coleção sem nenhuma mensalidade ou cobrança recorrente.</p>
+            <p>O pagamento é único! Você paga uma única vez — R$ 9,90 pelo plano Básico ou R$ 19,90 pelo plano Completo — e tem acesso à coleção sem nenhuma mensalidade ou cobrança recorrente.</p>
           </div>
         </div>
       </div>
@@ -428,11 +454,11 @@
       <div class="page-width">
         <span class="eyebrow">Última Chance</span>
         <h2 class="section-title" style="margin-bottom: 12px;">Garanta sua coleção de Natal antes de sair</h2>
-        <p class="section-subtitle" style="margin-bottom: 24px;">Por apenas R$ 19,90 com acesso imediato e garantia de 7 dias.</p>
+        <p class="section-subtitle" style="margin-bottom: 24px;">A partir de R$ 9,90 com acesso imediato e garantia de 7 dias.</p>
         
         <!-- Botão 4: Fechamento Final (Rola até a oferta) -->
         <a href="#oferta" class="purchase-button" data-scroll-offer>
-          QUERO MINHAS CAIXINHAS POR R$ 19,90
+          QUERO MINHAS CAIXINHAS — VER PLANOS
           <i class="fas fa-arrow-right"></i>
         </a>
       </div>
@@ -448,14 +474,14 @@
   </footer>
 
   <!-- 13. BOTÃO FIXO MOBILE (SURGE APÓS ROLAGEM E ROLA ATÉ A OFERTA) -->
-  <div class="mobile-sticky-cta" id="mobileStickyCta">
-    <div class="mobile-sticky-cta-inner">
-      <a href="#oferta" class="purchase-button" data-scroll-offer>
-        COMPRAR AGORA • R$ 19,90
-        <i class="fas fa-arrow-right"></i>
-      </a>
+    <div class="mobile-sticky-cta" id="mobileStickyCta">
+      <div class="mobile-sticky-cta-inner">
+        <a href="#oferta" class="purchase-button" data-scroll-offer>
+          VER PLANOS — A PARTIR DE R$ 9,90
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
     </div>
-  </div>
 
   <!-- Script Principal -->
   <script src="js/app.js"></script>
