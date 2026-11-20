@@ -1,4 +1,4 @@
-/* ==========================================================================
+﻿/* ==========================================================================
    PÁGINA DE VENDAS DIRETA (LOW TICKET) - CAIXINHAS DE NATAL R$ 19,90
    Foco 100% em Conversão de Tráfego Pago (Instagram & Facebook Ads)
    Inspirada na Estrutura Comercial de Alta Conversão da Referência
@@ -52,6 +52,8 @@ html {
   font-size: 16px;
   background-color: var(--background);
   color: var(--foreground);
+  touch-action: manipulation;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -61,12 +63,20 @@ body {
   line-height: 1.5;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 img {
   max-width: 100%;
   height: auto;
   display: block;
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: auto;
 }
 
 a {
@@ -194,19 +204,167 @@ button {
 
 /* Hero Showcase Image */
 .hero-mockup-wrapper {
-  max-width: 760px;
-  margin: 0 auto 22px;
+  max-width: 820px;
+  margin: 0 auto 24px;
+  position: relative;
+}
+
+.hero-mockup-inner {
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 14px 34px rgba(68, 37, 31, 0.14);
-  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e5e5;
+  background: #ffffff;
 }
 
 .hero-mockup-img {
   width: 100%;
   height: auto;
+  display: block;
   object-fit: cover;
+}
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Badges Flutuantes do Mockup */
+.hero-float-badge {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #581c20;
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 7px 14px;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(197, 40, 61, 0.25);
+  z-index: 5;
+  white-space: nowrap;
+}
+
+.hero-float-badge i {
+  color: #c5283d;
+  font-size: 0.9rem;
+}
+
+.hero-float-badge.top-left {
+  top: 14px;
+  left: 14px;
+}
+
+.hero-float-badge.top-right {
+  top: 14px;
+  right: 14px;
+}
+
+.hero-float-badge.bottom-left {
+  bottom: 14px;
+  left: 14px;
+}
+
+.hero-float-badge.bottom-right {
+  bottom: 14px;
+  right: 14px;
+}
+
+/* ==========================================================================
+   NOVA SEÇÃO: PROCESSO DE PRODUÇÃO PASSO A PASSO
+   ========================================================================== */
+.production-section {
+  padding: 48px 0 54px;
+  background: linear-gradient(180deg, #fffaf5 0%, #fff6ed 100%);
+  border-top: 1px solid #f0e6dc;
+  border-bottom: 1px solid #f0e6dc;
+}
+
+.production-banner-wrapper {
+  max-width: 860px;
+  margin: 0 auto 32px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(107, 37, 38, 0.14);
+  border: 1px solid rgba(197, 40, 61, 0.2);
+}
+
+.production-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.production-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.prod-step-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 24px 16px;
+  border: 1px solid #ede1d7;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.prod-step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 26px rgba(107, 37, 38, 0.12);
+}
+
+.prod-step-number {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background: #c5283d;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 0.9rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 10px rgba(197, 40, 61, 0.4);
+  border: 2px solid #ffffff;
+}
+
+.prod-step-icon {
+  font-size: 1.7rem;
+  color: #16a34a;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.prod-step-title {
+  font-size: 1.02rem;
+  font-weight: 800;
+  color: #6b2526;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.prod-step-desc {
+  font-size: 0.85rem;
+  color: #7c5c54;
+  line-height: 1.45;
 }
 
 /* Preço e CTA Hero */
@@ -898,6 +1056,386 @@ button {
 }
 
 /* ==========================================================================
+   ELEMENTOS DE CONVERSÃO REFORÇADOS (NOVEMBRO / URGÊNCIA / PROVA SOCIAL)
+   ========================================================================== */
+
+/* 1. Urgência de Novembro no Banner Superior */
+.top-promo-banner.urgent-november {
+  background: linear-gradient(90deg, #450a0a 0%, #7f1d1d 50%, #450a0a 100%);
+  border-bottom: 2px solid #ef4444;
+}
+
+.top-promo-banner.urgent-november .top-promo-badge {
+  background: rgba(239, 68, 68, 0.3);
+  border-color: #f87171;
+  color: #fef08a;
+}
+
+.top-promo-banner.urgent-november .top-promo-badge i {
+  color: #f87171;
+  animation: pulseFire 1.2s infinite alternate;
+}
+
+@keyframes pulseFire {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.25); }
+}
+
+/* 2. Selo de Avaliação e Prova Social no Hero */
+.hero-social-proof-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fef9c3;
+  border: 1px solid #fde047;
+  color: #854d0e;
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: 12px;
+}
+
+.hero-social-proof-pill .stars {
+  color: #eab308;
+  display: inline-flex;
+  gap: 2px;
+  font-size: 0.75rem;
+}
+
+.hero-social-proof-pill strong {
+  color: #713f12;
+}
+
+/* 3. PROVA SOCIAL - CARROSSEL INFINITO INSTAGRAM DIRECT */
+.insta-section {
+  padding: 44px 0 50px;
+  background: #fafafa;
+  overflow: hidden;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+}
+
+.insta-marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+  margin: 22px 0 12px;
+  user-select: none;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);
+}
+
+.insta-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: insta-marquee-slide 50s linear infinite;
+}
+
+.insta-marquee-track:hover,
+.insta-marquee-track:active {
+  animation-play-state: paused;
+}
+
+.insta-marquee-set {
+  display: flex;
+  gap: 18px;
+  padding-right: 18px;
+}
+
+.insta-card {
+  width: 320px;
+  flex-shrink: 0;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  border: 1px solid #dbdbdb;
+  display: flex;
+  flex-direction: column;
+}
+
+.insta-header {
+  background: #ffffff;
+  color: #262626;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.insta-back-icon {
+  color: #262626;
+  font-size: 0.95rem;
+  margin-right: 2px;
+}
+
+.insta-avatar-wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 2px;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.insta-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.insta-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(5.5px);
+  transform: scale(1.15);
+  display: block;
+}
+
+.insta-user-info {
+    flex: 1;
+    min-width: 0;
+    filter: blur(5.5px);
+    user-select: none;
+    -webkit-user-select: none;
+    pointer-events: none;
+    opacity: 0.8;
+  }
+
+.insta-username {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #262626;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.insta-status {
+  font-size: 0.72rem;
+  color: #8e8e8e;
+  font-weight: 500;
+}
+
+.insta-header-actions {
+  color: #262626;
+  display: flex;
+  gap: 14px;
+  font-size: 1rem;
+}
+
+.insta-body {
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  background: #ffffff;
+}
+
+.insta-date-pill {
+  align-self: center;
+  color: #8e8e8e;
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.insta-msg {
+  max-width: 86%;
+  padding: 10px 14px;
+  border-radius: 20px;
+  font-size: 0.86rem;
+  line-height: 1.4;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.insta-msg.incoming {
+  align-self: flex-start;
+  background: #efefef;
+  color: #262626;
+  border-bottom-left-radius: 6px;
+}
+
+.insta-msg.outgoing {
+  align-self: flex-end;
+  background: linear-gradient(135deg, #3797f0 0%, #735bf2 100%);
+  color: #ffffff;
+  border-bottom-right-radius: 6px;
+}
+
+.insta-reaction {
+  position: absolute;
+  bottom: -9px;
+  right: 8px;
+  background: #ffffff;
+  border: 1px solid #efefef;
+  border-radius: 12px;
+  font-size: 0.72rem;
+  padding: 1px 5px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  line-height: 1;
+}
+
+.insta-pause-note {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #8e8e8e;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.insta-pause-note i {
+  color: #e1306c;
+}
+
+@keyframes insta-marquee-slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* 4. ANCORAGEM DE LUCRO E RENDA EXTRA NO NATAL */
+.profit-section {
+  padding: 48px 0;
+  background: linear-gradient(180deg, #fffdfa 0%, #fff7ed 100%);
+  border-top: 1px solid #fed7aa;
+  border-bottom: 1px solid #fed7aa;
+}
+
+.profit-calculator-card {
+  background: #ffffff;
+  border: 2px solid #ea580c;
+  border-radius: 20px;
+  padding: 30px 22px;
+  box-shadow: 0 12px 32px rgba(234, 88, 12, 0.11);
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.profit-badge {
+  display: inline-block;
+  background: #ffedd5;
+  color: #c2410c;
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.profit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 22px 0;
+}
+
+.profit-step {
+  background: #f8fafc;
+  border-radius: 14px;
+  padding: 16px 12px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+}
+
+.profit-step-num {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.profit-step-val {
+  font-size: 1.4rem;
+  font-weight: 900;
+  margin: 4px 0;
+}
+
+.profit-step-val.cost {
+  color: #dc2626;
+}
+
+.profit-step-val.sell {
+  color: #0284c7;
+}
+
+.profit-step-val.gain {
+  color: #16a34a;
+}
+
+.profit-step-desc {
+  font-size: 0.78rem;
+  color: #475569;
+  line-height: 1.35;
+}
+
+.profit-conclusion-box {
+  background: #f0fdf4;
+  border: 2px dashed #22c55e;
+  border-radius: 14px;
+  padding: 14px 18px;
+  text-align: center;
+  color: #166534;
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+/* 5. TAGS DE BÔNUS NOS PLANOS */
+.bonus-tag {
+  background: #fef08a;
+  color: #854d0e;
+  font-size: 0.72rem;
+  font-weight: 900;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-left: 4px;
+  display: inline-block;
+  letter-spacing: 0.04em;
+}
+
+.offer-plan-items li.bonus-item {
+  background: #fffbeb;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px dashed #fde047;
+  margin-bottom: 6px;
+  color: #78350f;
+  font-weight: 700;
+}
+
+.offer-plan-items li.bonus-item i {
+  color: #d97706 !important;
+}
+
+.offer-plan-items li.negative-item {
+  color: #94a3b8;
+  opacity: 0.85;
+}
+
+.offer-plan-items li.negative-item i {
+  color: #cbd5e1 !important;
+}
+
+/* ==========================================================================
    RESPONSIVIDADE (MOBILE & TABLET)
    ========================================================================== */
 @media (max-width: 768px) {
@@ -922,55 +1460,141 @@ button {
   }
 
   .hero {
-    padding-top: 16px;
-    padding-bottom: 24px;
+    padding-top: 10px;
+    padding-bottom: 18px;
+  }
+
+  .hero-social-proof-pill {
+    font-size: 0.72rem;
+    padding: 3px 10px;
+    margin-bottom: 8px;
   }
 
   .hero-label {
-    margin-bottom: 10px;
-    font-size: 0.72rem;
-    padding: 4px 12px;
+    margin-bottom: 8px;
+    font-size: 0.7rem;
+    padding: 3px 10px;
   }
 
   .hero h1 {
-    font-size: 1.55rem;
-    line-height: 1.22;
-    margin-bottom: 10px;
-    max-width: 420px;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    max-width: 360px;
   }
   
   .hero-description {
-    font-size: 0.88rem;
-    line-height: 1.45;
-    margin-bottom: 14px;
-    max-width: 380px;
+    font-size: 0.84rem;
+    line-height: 1.38;
+    margin-bottom: 10px;
+    max-width: 340px;
   }
 
   .hero-mockup-wrapper {
-    max-width: 460px;
+    max-width: 380px;
     margin-bottom: 14px;
+  }
+
+  .hero-float-badge {
+    font-size: 0.65rem;
+    padding: 4px 8px;
+    gap: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .hero-float-badge i {
+    font-size: 0.72rem;
+  }
+
+  .hero-float-badge.top-left {
+    top: 8px;
+    left: 8px;
+  }
+
+  .hero-float-badge.top-right {
+    top: 8px;
+    right: 8px;
+  }
+
+  .hero-float-badge.bottom-left {
+    bottom: 8px;
+    left: 8px;
+  }
+
+  .hero-float-badge.bottom-right {
+    bottom: 8px;
+    right: 8px;
+  }
+
+  .production-steps-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .prod-step-card {
+    padding: 16px 10px;
     border-radius: 14px;
   }
 
+  .prod-step-number {
+    width: 24px;
+    height: 24px;
+    font-size: 0.75rem;
+    top: -10px;
+  }
+
+  .prod-step-icon {
+    font-size: 1.3rem;
+    margin-top: 4px;
+    margin-bottom: 6px;
+  }
+
+  .prod-step-title {
+    font-size: 0.88rem;
+    margin-bottom: 4px;
+  }
+
+  .prod-step-desc {
+    font-size: 0.74rem;
+    line-height: 1.35;
+  }
+
   .hero-cta-area {
-    margin-top: 8px;
+    margin-top: 4px;
   }
 
   .hero-price-tag {
-    font-size: 0.78rem;
-    margin-bottom: 2px;
+    font-size: 0.72rem;
+    margin-bottom: 0px;
   }
 
   .hero-price-value {
-    font-size: 1.95rem;
-    margin-bottom: 10px;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
   }
 
   .purchase-button {
-    font-size: 0.95rem;
-    padding: 14px 24px;
+    font-size: 0.92rem;
+    padding: 13px 20px;
     width: 100%;
-    max-width: 380px;
+    max-width: 360px;
+  }
+
+  .profit-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .profit-calculator-card {
+    padding: 20px 16px;
+  }
+  
+  .insta-card {
+    width: 290px;
+  }
+
+  .insta-marquee-track {
+    animation-duration: 40s;
   }
 
   .trust-row {

@@ -1,23 +1,25 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Caixinhas de Natal para Imprimir e Montar | Moldes Prontos por R$ 19,90</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Caixinhas de Natal para Imprimir e Montar | Moldes Prontos em PDF</title>
   
   <!-- SEO & Tráfego Pago (Instagram / Facebook Ads) -->
-  <meta name="description" content="Moldes de caixinhas natalinas para imprimir, recortar e montar em casa. Crie embalagens encantadoras para doces, presentes e lembrancinhas por apenas R$ 19,90.">
-  <meta property="og:title" content="Caixinhas de Natal para Imprimir e Montar | R$ 19,90">
+  <meta name="description" content="Moldes de caixinhas natalinas para imprimir, recortar e montar em casa. Crie embalagens encantadoras para doces, presentes e lembrancinhas.">
+  <meta property="og:title" content="Caixinhas de Natal para Imprimir e Montar | Moldes Prontos">
   <meta property="og:description" content="Coleção de moldes natalinos prontos para imprimir em folha A4. Baixe agora mesmo!">
   <meta property="og:image" content="assets/images/hero_showcase.jpg">
   <meta property="og:type" content="website">
 
-  <!-- Fonte Nunito (Idêntica à Referência) -->
+  <!-- Fonte Nunito (Local com fallback CDN) -->
+  <link rel="stylesheet" href="vendor/fonts/nunito.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   
-  <!-- FontAwesome 6 Icons -->
+  <!-- FontAwesome 6 Icons (Local com fallback CDN) -->
+  <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <!-- Estilos Customizados -->
@@ -25,17 +27,17 @@
 </head>
 <body>
 
-  <!-- 1. Faixa Superior Temática de Natal -->
-  <div class="top-promo-banner">
+  <!-- 1. Faixa Superior Temática de Natal (Gatilho de Urgência Temporal de Novembro) -->
+  <div class="top-promo-banner urgent-november">
     <div class="top-promo-inner">
       <div class="top-promo-badge">
-        <i class="fas fa-sparkles"></i>
-        <strong>OFERTA DO DIA</strong>
+        <i class="fas fa-fire"></i>
+        <strong>URGÊNCIA DE NATAL</strong>
         <span class="top-promo-separator">•</span>
         <span id="currentDateDisplay">--/--/----</span>
       </div>
       <div class="top-promo-message">
-        COLEÇÃO ESPECIAL DE NATAL • ARQUIVOS DIGITAIS PRONTOS PARA IMPRIMIR
+        🚨 RESTAM POUCAS SEMANAS! BAIXE OS MOLDES E COMECE A PRODUZIR SUAS ENCOMENDAS HOJE MESMO
       </div>
     </div>
   </div>
@@ -43,6 +45,14 @@
   <main>
     <!-- 2. PRIMEIRA DOBRA (HERO DE VENDAS DIRETA) -->
     <section class="hero page-width">
+      <!-- Prova Social Imediata (Nota e Alunas) -->
+      <div class="hero-social-proof-pill">
+        <span class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </span>
+        <span><strong>4.9/5</strong> • Mais de 1.480 artesãs e confeiteiras lucrando</span>
+      </div>
+
       <div class="hero-label">
         <i class="fas fa-gift"></i> MOLDES DIGITAIS PRONTOS PARA IMPRIMIR
       </div>
@@ -55,20 +65,25 @@
         Coleção de moldes natalinos para imprimir em folha A4 e montar caixinhas especiais para doces, presentes e lembrancinhas.
       </p>
 
-      <!-- Grande Composição Visual de Impacto -->
+      <!-- Composição Fotográfica Real: Artesã com Embalagem, Mesa Branca, Impressora e Caixinhas -->
       <div class="hero-mockup-wrapper">
-        <img 
-          src="assets/images/hero_showcase.jpg" 
-          alt="Composição visual com moldes e caixinhas de Natal montadas" 
-          class="hero-mockup-img"
-          loading="eager"
-        >
+        <div class="hero-mockup-inner">
+          <img 
+            src="assets/images/hero_artesa_showcase.jpg?v=bis_completo" 
+            alt="Artesã segurando caixinha natalina de presente com mesa farta de embalagens, caixa de Bis, mini panetone, impressora e árvore de Natal ao fundo" 
+            class="hero-mockup-img"
+            loading="eager"
+          >
+        </div>
       </div>
 
       <!-- Preço e Botão de Compra Primário -->
       <div class="hero-cta-area">
-        <div class="hero-price-tag">A partir de</div>
+        <div class="hero-price-tag">Oferta Especial de Natal</div>
         <div class="hero-price-value">R$ <span>9,90</span></div>
+        <div style="font-size: 0.82rem; color: #7c5c54; margin-top: -6px; margin-bottom: 12px; font-weight: 700;">
+          Pagamento único • Acesso imediato no seu e-mail
+        </div>
 
         <!-- Botão 1: Hero (Rola até a oferta) -->
         <a href="#oferta" class="purchase-button" data-scroll-offer>
@@ -108,19 +123,19 @@
       <div class="marquee-wrapper">
         <div class="marquee-track">
           <div class="marquee-set">
-            <div class="marquee-item"><img src="assets/images/moldes/1.jpg" alt="Molde 1" loading="lazy"><span class="marquee-item-caption">Molde Caixinha Natal 1</span></div>
-            <div class="marquee-item"><img src="assets/images/moldes/2.jpg" alt="Molde 2" loading="lazy"><span class="marquee-item-caption">Molde Caixinha Natal 2</span></div>
-            <div class="marquee-item"><img src="assets/images/moldes/3.jpg" alt="Molde 3" loading="lazy"><span class="marquee-item-caption">Molde Caixinha Natal 3</span></div>
-            <div class="marquee-item"><img src="assets/images/moldes/4.jpg" alt="Molde 4" loading="lazy"><span class="marquee-item-caption">Molde Caixinha Natal 4</span></div>
-            <div class="marquee-item"><img src="assets/images/moldes/5.jpg" alt="Molde 5" loading="lazy"><span class="marquee-item-caption">Molde Caixinha Natal 5</span></div>
+            <div class="marquee-item"><img src="assets/images/moldes/1.jpg" alt="Molde 1" loading="lazy"><span class="marquee-item-caption">Caixa Visor p/ 6 Brigadeiros</span></div>
+            <div class="marquee-item"><img src="assets/images/moldes/2.jpg" alt="Molde 2" loading="lazy"><span class="marquee-item-caption">Cinta Decorada Mini Panetone</span></div>
+            <div class="marquee-item"><img src="assets/images/moldes/3.jpg" alt="Molde 3" loading="lazy"><span class="marquee-item-caption">Caixa Envelope Lembrancinha</span></div>
+            <div class="marquee-item"><img src="assets/images/moldes/4.jpg" alt="Molde 4" loading="lazy"><span class="marquee-item-caption">Porta 3 Doces & Bombons</span></div>
+            <div class="marquee-item"><img src="assets/images/moldes/5.jpg" alt="Molde 5" loading="lazy"><span class="marquee-item-caption">Card Trio Chocolates Finos</span></div>
           </div>
           <!-- Duplicado para loop infinito fluído -->
           <div class="marquee-set" aria-hidden="true">
-            <div class="marquee-item"><img src="assets/images/moldes/1.jpg" alt="Molde 1" loading="lazy"><span class="marquee-item-caption">Molde Caixinha Natal 1</span></div>
-            <div class="marquee-item"><img src="assets/images/moldes/2.jpg" alt="Molde 2" loading="lazy"><span class="marquee-item-caption">Molde Caixinha Natal 2</span></div>
-            <div class="marquee-item"><img src="assets/images/moldes/3.jpg" alt="Molde 3" loading="lazy"><span class="marquee-item-caption">Molde Caixinha Natal 3</span></div>
-            <div class="marquee-item"><img src="assets/images/moldes/4.jpg" alt="Molde 4" loading="lazy"><span class="marquee-item-caption">Molde Caixinha Natal 4</span></div>
-            <div class="marquee-item"><img src="assets/images/moldes/5.jpg" alt="Molde 5" loading="lazy"><span class="marquee-item-caption">Molde Caixinha Natal 5</span></div>
+            <div class="marquee-item"><img src="assets/images/moldes/1.jpg" alt="Molde 1" loading="lazy"><span class="marquee-item-caption">Caixa Visor p/ 6 Brigadeiros</span></div>
+            <div class="marquee-item"><img src="assets/images/moldes/2.jpg" alt="Molde 2" loading="lazy"><span class="marquee-item-caption">Cinta Decorada Mini Panetone</span></div>
+            <div class="marquee-item"><img src="assets/images/moldes/3.jpg" alt="Molde 3" loading="lazy"><span class="marquee-item-caption">Caixa Envelope Lembrancinha</span></div>
+            <div class="marquee-item"><img src="assets/images/moldes/4.jpg" alt="Molde 4" loading="lazy"><span class="marquee-item-caption">Porta 3 Doces & Bombons</span></div>
+            <div class="marquee-item"><img src="assets/images/moldes/5.jpg" alt="Molde 5" loading="lazy"><span class="marquee-item-caption">Card Trio Chocolates Finos</span></div>
           </div>
         </div>
       </div>
@@ -129,18 +144,18 @@
       <div class="marquee-wrapper">
         <div class="marquee-track reverse">
           <div class="marquee-set">
-            <div class="marquee-item"><img src="assets/images/moldes/6.jpg" alt="Molde 6" loading="lazy"><span class="marquee-item-caption">Molde Caixinha Natal 6</span></div>
-            <div class="marquee-item"><img src="assets/images/moldes/7.jpg" alt="Molde 7" loading="lazy"><span class="marquee-item-caption">Molde Caixinha Natal 7</span></div>
-            <div class="marquee-item"><img src="assets/images/moldes/8.jpg" alt="Molde 8" loading="lazy"><span class="marquee-item-caption">Molde Caixinha Natal 8</span></div>
-            <div class="marquee-item"><img src="assets/images/moldes/9.jpg" alt="Molde 9" loading="lazy"><span class="marquee-item-caption">Molde Caixinha Natal 9</span></div>
-            <div class="marquee-item"><img src="assets/images/moldes/10.jpg" alt="Molde 10" loading="lazy"><span class="marquee-item-caption">Molde Caixinha Natal 10</span></div>
+            <div class="marquee-item"><img src="assets/images/moldes/6.jpg" alt="Molde 6" loading="lazy"><span class="marquee-item-caption">Porta Bombom & Batom Noel</span></div>
+            <div class="marquee-item"><img src="assets/images/moldes/7.jpg" alt="Molde 7" loading="lazy"><span class="marquee-item-caption">Caixa Sextavada Árvore</span></div>
+            <div class="marquee-item"><img src="assets/images/moldes/8.jpg" alt="Molde 8" loading="lazy"><span class="marquee-item-caption">Porta Bis Duplo Boas Festas</span></div>
+            <div class="marquee-item"><img src="assets/images/moldes/9.jpg" alt="Molde 9" loading="lazy"><span class="marquee-item-caption">Sacolinha Mimo Natalino A4</span></div>
+            <div class="marquee-item"><img src="assets/images/moldes/10.jpg" alt="Molde 10" loading="lazy"><span class="marquee-item-caption">Caixa Barra Recheada de Natal</span></div>
           </div>
           <div class="marquee-set" aria-hidden="true">
-            <div class="marquee-item"><img src="assets/images/moldes/6.jpg" alt="Molde 6" loading="lazy"><span class="marquee-item-caption">Molde Caixinha Natal 6</span></div>
-            <div class="marquee-item"><img src="assets/images/moldes/7.jpg" alt="Molde 7" loading="lazy"><span class="marquee-item-caption">Molde Caixinha Natal 7</span></div>
-            <div class="marquee-item"><img src="assets/images/moldes/8.jpg" alt="Molde 8" loading="lazy"><span class="marquee-item-caption">Molde Caixinha Natal 8</span></div>
-            <div class="marquee-item"><img src="assets/images/moldes/9.jpg" alt="Molde 9" loading="lazy"><span class="marquee-item-caption">Molde Caixinha Natal 9</span></div>
-            <div class="marquee-item"><img src="assets/images/moldes/10.jpg" alt="Molde 10" loading="lazy"><span class="marquee-item-caption">Molde Caixinha Natal 10</span></div>
+            <div class="marquee-item"><img src="assets/images/moldes/6.jpg" alt="Molde 6" loading="lazy"><span class="marquee-item-caption">Porta Bombom & Batom Noel</span></div>
+            <div class="marquee-item"><img src="assets/images/moldes/7.jpg" alt="Molde 7" loading="lazy"><span class="marquee-item-caption">Caixa Sextavada Árvore</span></div>
+            <div class="marquee-item"><img src="assets/images/moldes/8.jpg" alt="Molde 8" loading="lazy"><span class="marquee-item-caption">Porta Bis Duplo Boas Festas</span></div>
+            <div class="marquee-item"><img src="assets/images/moldes/9.jpg" alt="Molde 9" loading="lazy"><span class="marquee-item-caption">Sacolinha Mimo Natalino A4</span></div>
+            <div class="marquee-item"><img src="assets/images/moldes/10.jpg" alt="Molde 10" loading="lazy"><span class="marquee-item-caption">Caixa Barra Recheada de Natal</span></div>
           </div>
         </div>
       </div>
@@ -148,7 +163,7 @@
       <!-- Botão 2: Após Marquee (Rola até a oferta) -->
       <div class="hero-buy-action">
         <a href="#oferta" class="purchase-button" data-scroll-offer>
-          VER AS OFERTAS — A PARTIR DE R$ 9,90
+          QUERO MINHAS CAIXINHAS DE NATAL
           <i class="fas fa-arrow-right"></i>
         </a>
       </div>
@@ -214,9 +229,479 @@
             </div>
           </div>
         </div>
+
+        <div class="showcase-card">
+          <img src="assets/images/real/card_trio_lacreme.jpg" alt="Card Trio de Bombons Finos" loading="lazy">
+          <div class="showcase-card-body">
+            <span class="showcase-badge">Doces Finos</span>
+            <h3 class="showcase-card-title">Card Trio Chocolates & Bombons</h3>
+            <p class="showcase-card-desc">Encaixe perfeito para 3 bombons finos. Uma lembrança charmosa e de altíssima saída!</p>
+            <div class="showcase-card-footer">
+              <span><i class="fas fa-check"></i> Lucro imediato</span>
+              <span><i class="fas fa-print"></i> Folha A4</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase-card">
+          <img src="assets/images/real/card_batom_vela.jpg" alt="Card Porta Batom e Mimos" loading="lazy">
+          <div class="showcase-card-body">
+            <span class="showcase-badge">Lembrancinhas Rápidas</span>
+            <h3 class="showcase-card-title">Porta Batom & Mimos Natalinos</h3>
+            <p class="showcase-card-desc">Ideal para presentear professores, colegas de trabalho e fechar pedidos de grandes lotes.</p>
+            <div class="showcase-card-footer">
+              <span><i class="fas fa-check"></i> Super econômico</span>
+              <span><i class="fas fa-print"></i> Folha A4</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- 4.0 COMO FUNCIONA NA PRÁTICA (DO PAPEL À CAIXINHA PRONTA) -->
+    <section class="section section-tint production-section">
+      <div class="page-width">
+        <div class="section-header-center">
+          <span class="eyebrow" style="color: #16a34a; background: #f0fdf4; border-color: rgba(22, 163, 74, 0.25);">
+            <i class="fas fa-magic"></i> Simples & Rápido
+          </span>
+          <h2 class="section-title">Como funciona na prática: Do papel ao presente pronto</h2>
+          <p class="section-subtitle">Você não precisa de máquinas caras ou experiência. Tudo foi planejado para ser feito na mesa de casa com tesoura comum:</p>
+        </div>
+
+        <!-- Grande Banner Fotográfico Sequencial do Processo -->
+        <div class="production-banner-wrapper">
+          <img 
+            src="assets/images/passo_a_passo_producao.jpg" 
+            alt="Passo a passo: 1 Imprimir, 2 Recortar na tesoura, 3 Dobrar e colar, 4 Caixinha pronta com doces" 
+            class="production-banner-img"
+            loading="lazy"
+          >
+        </div>
+
+        <!-- Cards das 4 Etapas Didáticas -->
+        <div class="production-steps-grid">
+          <div class="prod-step-card">
+            <div class="prod-step-number">1</div>
+            <div class="prod-step-icon"><i class="fas fa-print"></i></div>
+            <h3 class="prod-step-title">Imprima em Folha A4</h3>
+            <p class="prod-step-desc">Use sua impressora caseira normal (Epson, HP, Canon) ou imprima numa gráfica rápida por cerca de R$ 1,20 a folha.</p>
+          </div>
+
+          <div class="prod-step-card">
+            <div class="prod-step-number">2</div>
+            <div class="prod-step-icon"><i class="fas fa-cut"></i></div>
+            <h3 class="prod-step-title">Recorte na Tesoura Comum</h3>
+            <p class="prod-step-desc">Linhas retas e guias claras. Nada de Silhouette ou máquinas caras: qualquer tesoura escolar recorta em 3 a 5 minutos.</p>
+          </div>
+
+          <div class="prod-step-card">
+            <div class="prod-step-number">3</div>
+            <div class="prod-step-icon"><i class="fas fa-layer-group"></i></div>
+            <h3 class="prod-step-title">Dobre e Cole em Minutos</h3>
+            <p class="prod-step-desc">Vincos fáceis de dobrar e abas de encaixe prático com cola bastão ou cola branca comum. Fica firme e com acabamento de ateliê.</p>
+          </div>
+
+          <div class="prod-step-card">
+            <div class="prod-step-number">4</div>
+            <div class="prod-step-icon"><i class="fas fa-gift"></i></div>
+            <h3 class="prod-step-title">Encha de Doces e Lucre!</h3>
+            <p class="prod-step-desc">Coloque brigadeiros, bombons, sabonetes ou panetones. Venda por R$ 15 a R$ 25 cada e tenha lucro líquido imediato!</p>
+          </div>
+        </div>
+
+        <div class="hero-buy-action" style="margin-top: 30px;">
+          <a href="#oferta" class="purchase-button" data-scroll-offer>
+            QUERO COMEÇAR A PRODUZIR HOJE
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4.1 PROVA SOCIAL REALISTA INSTAGRAM DIRECT (CARROSSEL INFINITO / MARQUEE) -->
+    <section class="section section-tint insta-section">
+      <div class="page-width">
+        <div class="section-header-center">
+          <span class="eyebrow" style="color: #c13584; background: #fdf2f8; border-color: rgba(193,53,132,0.25);">
+            <i class="fab fa-instagram"></i> Feedbacks Reais no Direct
+          </span>
+          <h2 class="section-title">O que nossas clientes estão dizendo no Direct</h2>
+          <p class="section-subtitle">Prints autorizados de quem já baixou os moldes e começou a produzir <span style="display:block; font-size: 0.85em; color: #8e8e8e; margin-top: 4px;">(identidade e fotos desfocadas em respeito à privacidade das clientes)</span></p>
+        </div>
+      </div>
+
+      <!-- Carrossel Deslizante Contínuo (Instagram Direct Marquee) -->
+      <div class="insta-marquee-wrapper">
+        <div class="insta-marquee-track">
+
+          <!-- CONJUNTO 1 -->
+          <div class="insta-marquee-set">
+
+            <!-- Card 1: Confeiteira / Doces de Natal (Margem e Custo) -->
+            <div class="insta-card">
+              <div class="insta-header">
+                <i class="fas fa-chevron-left insta-back-icon"></i>
+                <div class="insta-avatar-wrapper">
+                  <div class="insta-avatar">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23fed7aa'/><circle cx='50' cy='40' r='18' fill='%23fb923c'/><path d='M50 18 C34 18 28 32 28 48 C36 44 44 38 52 38 C60 38 66 42 72 48 C72 32 64 18 50 18 Z' fill='%239a3412'/><path d='M22 88 C26 66 40 62 50 62 C60 62 74 66 78 88 Z' fill='%23f43f5e'/></svg>" alt="Cliente">
+                  </div>
+                </div>
+                <div class="insta-user-info">
+                  <div class="insta-username">@confeitaria_••••••</div>
+                  <div class="insta-status">Ativa há 15 min</div>
+                </div>
+                <div class="insta-header-actions">
+                  <i class="fas fa-phone-alt"></i>
+                  <i class="fas fa-video"></i>
+                  <i class="fas fa-info-circle"></i>
+                </div>
+              </div>
+              <div class="insta-body">
+                <div class="insta-date-pill">Hoje às 15:42</div>
+                <div class="insta-msg incoming">
+                  Oii flor! Tô passando pra te agradecer de coração ❤️ Eu tava quase desistindo de pegar encomendas de Natal porque fui ver caixa pronta na papelaria e tavam me cobrando 12 reais em CADA uma... ia acabar todo o meu lucro dos brigadeiros!
+                  <span class="insta-reaction">❤️</span>
+                </div>
+                <div class="insta-msg outgoing">
+                  Oii! Menina, caixa pronta em loja de festa é um roubo mesmo 🥺 Que bom que você não comprou lá! Deu tudo certo com a impressão dos moldes?
+                </div>
+                <div class="insta-msg incoming">
+                  Nossa, deu mais do que certo! Imprimi na minha impressora normal em papel 180g. Gastei nem R$ 1,20 por caixinha! Cortei na tesoura ouvindo música e encaixou perfeito. Já peguei 32 encomendas pro Natal só com a foto que postei! Tô muito feliz 🙏✨
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: Mãe / Lembrancinhas Escolares (Corte na Tesoura sem Silhouette) -->
+            <div class="insta-card">
+              <div class="insta-header">
+                <i class="fas fa-chevron-left insta-back-icon"></i>
+                <div class="insta-avatar-wrapper">
+                  <div class="insta-avatar">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23fbcfe8'/><circle cx='50' cy='40' r='18' fill='%23f472b6'/><path d='M50 18 C34 18 26 34 26 50 C36 44 46 40 54 40 C62 40 70 44 74 50 C74 34 68 18 50 18 Z' fill='%23831843'/><path d='M22 88 C26 66 40 62 50 62 C60 62 74 66 78 88 Z' fill='%23db2777'/></svg>" alt="Cliente">
+                  </div>
+                </div>
+                <div class="insta-user-info">
+                  <div class="insta-username">@atelie_••••••••</div>
+                  <div class="insta-status">Ativa há 1 h</div>
+                </div>
+                <div class="insta-header-actions">
+                  <i class="fas fa-phone-alt"></i>
+                  <i class="fas fa-video"></i>
+                  <i class="fas fa-info-circle"></i>
+                </div>
+              </div>
+              <div class="insta-body">
+                <div class="insta-date-pill">Hoje às 11:15</div>
+                <div class="insta-msg incoming">
+                  Mulher do céu, vim aqui correndo te contar que montei minha primeira caixinha de Bis agora kkkk Eu tava morrendo de medo de comprar porque não tenho máquina de corte Silhouette nem nada disso, achei que ia ficar torto na tesoura
+                  <span class="insta-reaction">❤️</span>
+                </div>
+                <div class="insta-msg outgoing">
+                  Hahaha sério?! E como ficou? Deu pra cortar e dobrar certinho? 👏✨
+                </div>
+                <div class="insta-msg incoming">
+                  Ficou PERFEITA!! O vinco é muito bem marcadinho, usei uma régua pra dobrar e cortei na tesourinha escolar de ponta fina. Ficou linda parecendo de loja chique. Vou fazer 25 pros professores da escola dos meus filhos gastando quase nada! 😍
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: Encomenda Corporativa / Volume (Lucro Rápido) -->
+            <div class="insta-card">
+              <div class="insta-header">
+                <i class="fas fa-chevron-left insta-back-icon"></i>
+                <div class="insta-avatar-wrapper">
+                  <div class="insta-avatar">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23ede9fe'/><circle cx='50' cy='40' r='18' fill='%23a78bfa'/><path d='M50 16 C32 16 24 34 24 50 C34 44 46 38 54 38 C62 38 72 44 76 50 C76 34 68 16 50 16 Z' fill='%234c1d95'/><path d='M22 88 C26 66 40 62 50 62 C60 62 74 66 78 88 Z' fill='%237c3aed'/></svg>" alt="Cliente">
+                  </div>
+                </div>
+                <div class="insta-user-info">
+                  <div class="insta-username">@mimos_••••••••</div>
+                  <div class="insta-status">Ativa agora</div>
+                </div>
+                <div class="insta-header-actions">
+                  <i class="fas fa-phone-alt"></i>
+                  <i class="fas fa-video"></i>
+                  <i class="fas fa-info-circle"></i>
+                </div>
+              </div>
+              <div class="insta-body">
+                <div class="insta-date-pill">Ontem às 19:30</div>
+                <div class="insta-msg incoming">
+                  Boa noite! Só passando pra te dar um feedback: comprei os moldes na terça, montei 2 modelos de amostra e postei no meu feed e WhatsApp. Uma clínica de estética aqui da minha cidade viu e encomendou 50 caixas de mini panetone pros funcionários! 😱😱
+                  <span class="insta-reaction">❤️</span>
+                </div>
+                <div class="insta-msg outgoing">
+                  MEU DEUS!! Que bênção!! 50 unidades de uma vez só?! Parabéns demais flor! 🚀🎉
+                </div>
+                <div class="insta-msg incoming">
+                  Simm! Fechei a R$ 22,00 cada uma com o chocotone dentro! Como meu custo da caixinha foi só o papel e a fita, tirei um lucro limpo maravilhoso que vai salvar meu fim de ano! Muito obrigada pelos arquivos, trabalho impecável!
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4: Sem Computador / Uso Direto no Celular -->
+            <div class="insta-card">
+              <div class="insta-header">
+                <i class="fas fa-chevron-left insta-back-icon"></i>
+                <div class="insta-avatar-wrapper">
+                  <div class="insta-avatar">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23ccfbf1'/><circle cx='50' cy='40' r='18' fill='%232dd4bf'/><path d='M50 18 C34 18 28 32 28 46 C36 42 44 38 52 38 C60 38 66 42 72 46 C72 32 66 18 50 18 Z' fill='%23134e4a'/><path d='M22 88 C26 66 40 62 50 62 C60 62 74 66 78 88 Z' fill='%230d9488'/></svg>" alt="Cliente">
+                  </div>
+                </div>
+                <div class="insta-user-info">
+                  <div class="insta-username">@artes_••••••••</div>
+                  <div class="insta-status">Ativa há 3 h</div>
+                </div>
+                <div class="insta-header-actions">
+                  <i class="fas fa-phone-alt"></i>
+                  <i class="fas fa-video"></i>
+                  <i class="fas fa-info-circle"></i>
+                </div>
+              </div>
+              <div class="insta-body">
+                <div class="insta-date-pill">Ontem às 14:05</div>
+                <div class="insta-msg incoming">
+                  Oie! Passando pra elogiar a organização dos arquivos. Eu não tenho computador em casa, faço tudo pelo celular e tinha medo de não conseguir abrir o PDF ou mandar imprimir. Foi super fácil, baixei na hora e mandei direto pro Wi-Fi da impressora!
+                  <span class="insta-reaction">❤️</span>
+                </div>
+                <div class="insta-msg outgoing">
+                  Que maravilha! A gente preparou tudo pensando em quem usa direto pelo celular pra ser bem rápido e sem estresse! 🥰
+                </div>
+                <div class="insta-msg incoming">
+                  Nossa, nota mil! A caixinha sextavada e a sacolinha natalina com as tags ficaram um encanto! Já passei a indicação da página pra duas amigas que também fazem artesanato ❤️
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5: Renda Extra Imediata de Fim de Ano -->
+            <div class="insta-card">
+              <div class="insta-header">
+                <i class="fas fa-chevron-left insta-back-icon"></i>
+                <div class="insta-avatar-wrapper">
+                  <div class="insta-avatar">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23fef3c7'/><circle cx='50' cy='40' r='18' fill='%23fcd34d'/><path d='M50 18 C34 18 28 32 28 48 C36 44 44 38 52 38 C60 38 66 42 72 48 C72 32 64 18 50 18 Z' fill='%2378350f'/><path d='M22 88 C26 66 40 62 50 62 C60 62 74 66 78 88 Z' fill='%23d97706'/></svg>" alt="Cliente">
+                  </div>
+                </div>
+                <div class="insta-user-info">
+                  <div class="insta-username">@doces_••••••••</div>
+                  <div class="insta-status">Ativa ontem</div>
+                </div>
+                <div class="insta-header-actions">
+                  <i class="fas fa-phone-alt"></i>
+                  <i class="fas fa-video"></i>
+                  <i class="fas fa-info-circle"></i>
+                </div>
+              </div>
+              <div class="insta-body">
+                <div class="insta-date-pill">Segunda às 16:50</div>
+                <div class="insta-msg incoming">
+                  Gente, vocês não têm noção do alívio! Tô desempregada desde agosto e tava desesperada sem saber como comprar os presentes dos meus filhos esse ano. Vi o anúncio de vocês e comprei com o último dinheirinho que tinha.
+                  <span class="insta-reaction">❤️</span>
+                </div>
+                <div class="insta-msg outgoing">
+                  Poxa vida... e me conta, conseguiu montar os primeiros modelos? Como foi a reação das pessoas? ✨
+                </div>
+                <div class="insta-msg incoming">
+                  Montei 6 caixinhas com sabonetes e bombons, mostrei no grupo do condomínio e vendi TODAS em 20 minutos! Já comprei mais folha e tô com lista de espera pra entrega de dezembro. Vocês não venderam só moldes, trouxeram esperança pra minha família de verdade 🥺❤️🎅
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /.insta-marquee-set 1 -->
+
+          <!-- CONJUNTO 2 (DUPLICADO PARA LOOP INFINITO FLUIDO) -->
+          <div class="insta-marquee-set" aria-hidden="true">
+
+            <!-- Card 1 Duplicado -->
+            <div class="insta-card">
+              <div class="insta-header">
+                <i class="fas fa-chevron-left insta-back-icon"></i>
+                <div class="insta-avatar-wrapper">
+                  <div class="insta-avatar">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23fed7aa'/><circle cx='50' cy='40' r='18' fill='%23fb923c'/><path d='M50 18 C34 18 28 32 28 48 C36 44 44 38 52 38 C60 38 66 42 72 48 C72 32 64 18 50 18 Z' fill='%239a3412'/><path d='M22 88 C26 66 40 62 50 62 C60 62 74 66 78 88 Z' fill='%23f43f5e'/></svg>" alt="Cliente">
+                  </div>
+                </div>
+                <div class="insta-user-info">
+                  <div class="insta-username">@confeitaria_••••••</div>
+                  <div class="insta-status">Ativa há 15 min</div>
+                </div>
+                <div class="insta-header-actions">
+                  <i class="fas fa-phone-alt"></i>
+                  <i class="fas fa-video"></i>
+                  <i class="fas fa-info-circle"></i>
+                </div>
+              </div>
+              <div class="insta-body">
+                <div class="insta-date-pill">Hoje às 15:42</div>
+                <div class="insta-msg incoming">
+                  Oii flor! Tô passando pra te agradecer de coração ❤️ Eu tava quase desistindo de pegar encomendas de Natal porque fui ver caixa pronta na papelaria e tavam me cobrando 12 reais em CADA uma... ia acabar todo o meu lucro dos brigadeiros!
+                  <span class="insta-reaction">❤️</span>
+                </div>
+                <div class="insta-msg outgoing">
+                  Oii! Menina, caixa pronta em loja de festa é um roubo mesmo 🥺 Que bom que você não comprou lá! Deu tudo certo com a impressão dos moldes?
+                </div>
+                <div class="insta-msg incoming">
+                  Nossa, deu mais do que certo! Imprimi na minha impressora normal em papel 180g. Gastei nem R$ 1,20 por caixinha! Cortei na tesoura ouvindo música e encaixou perfeito. Já peguei 32 encomendas pro Natal só com a foto que postei! Tô muito feliz 🙏✨
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 Duplicado -->
+            <div class="insta-card">
+              <div class="insta-header">
+                <i class="fas fa-chevron-left insta-back-icon"></i>
+                <div class="insta-avatar-wrapper">
+                  <div class="insta-avatar">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23fbcfe8'/><circle cx='50' cy='40' r='18' fill='%23f472b6'/><path d='M50 18 C34 18 26 34 26 50 C36 44 46 40 54 40 C62 40 70 44 74 50 C74 34 68 18 50 18 Z' fill='%23831843'/><path d='M22 88 C26 66 40 62 50 62 C60 62 74 66 78 88 Z' fill='%23db2777'/></svg>" alt="Cliente">
+                  </div>
+                </div>
+                <div class="insta-user-info">
+                  <div class="insta-username">@atelie_••••••••</div>
+                  <div class="insta-status">Ativa há 1 h</div>
+                </div>
+                <div class="insta-header-actions">
+                  <i class="fas fa-phone-alt"></i>
+                  <i class="fas fa-video"></i>
+                  <i class="fas fa-info-circle"></i>
+                </div>
+              </div>
+              <div class="insta-body">
+                <div class="insta-date-pill">Hoje às 11:15</div>
+                <div class="insta-msg incoming">
+                  Mulher do céu, vim aqui correndo te contar que montei minha primeira caixinha de Bis agora kkkk Eu tava morrendo de medo de comprar porque não tenho máquina de corte Silhouette nem nada disso, achei que ia ficar torto na tesoura
+                  <span class="insta-reaction">❤️</span>
+                </div>
+                <div class="insta-msg outgoing">
+                  Hahaha sério?! E como ficou? Deu pra cortar e dobrar certinho? 👏✨
+                </div>
+                <div class="insta-msg incoming">
+                  Ficou PERFEITA!! O vinco é muito bem marcadinho, usei uma régua pra dobrar e cortei na tesourinha escolar de ponta fina. Ficou linda parecendo de loja chique. Vou fazer 25 pros professores da escola dos meus filhos gastando quase nada! 😍
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 Duplicado -->
+            <div class="insta-card">
+              <div class="insta-header">
+                <i class="fas fa-chevron-left insta-back-icon"></i>
+                <div class="insta-avatar-wrapper">
+                  <div class="insta-avatar">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23ede9fe'/><circle cx='50' cy='40' r='18' fill='%23a78bfa'/><path d='M50 16 C32 16 24 34 24 50 C34 44 46 38 54 38 C62 38 72 44 76 50 C76 34 68 16 50 16 Z' fill='%234c1d95'/><path d='M22 88 C26 66 40 62 50 62 C60 62 74 66 78 88 Z' fill='%237c3aed'/></svg>" alt="Cliente">
+                  </div>
+                </div>
+                <div class="insta-user-info">
+                  <div class="insta-username">@mimos_••••••••</div>
+                  <div class="insta-status">Ativa agora</div>
+                </div>
+                <div class="insta-header-actions">
+                  <i class="fas fa-phone-alt"></i>
+                  <i class="fas fa-video"></i>
+                  <i class="fas fa-info-circle"></i>
+                </div>
+              </div>
+              <div class="insta-body">
+                <div class="insta-date-pill">Ontem às 19:30</div>
+                <div class="insta-msg incoming">
+                  Boa noite! Só passando pra te dar um feedback: comprei os moldes na terça, montei 2 modelos de amostra e postei no meu feed e WhatsApp. Uma clínica de estética aqui da minha cidade viu e encomendou 50 caixas de mini panetone pros funcionários! 😱😱
+                  <span class="insta-reaction">❤️</span>
+                </div>
+                <div class="insta-msg outgoing">
+                  MEU DEUS!! Que bênção!! 50 unidades de uma vez só?! Parabéns demais flor! 🚀🎉
+                </div>
+                <div class="insta-msg incoming">
+                  Simm! Fechei a R$ 22,00 cada uma com o chocotone dentro! Como meu custo da caixinha foi só o papel e a fita, tirei um lucro limpo maravilhoso que vai salvar meu fim de ano! Muito obrigada pelos arquivos, trabalho impecável!
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 Duplicado -->
+            <div class="insta-card">
+              <div class="insta-header">
+                <i class="fas fa-chevron-left insta-back-icon"></i>
+                <div class="insta-avatar-wrapper">
+                  <div class="insta-avatar">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23ccfbf1'/><circle cx='50' cy='40' r='18' fill='%232dd4bf'/><path d='M50 18 C34 18 28 32 28 46 C36 42 44 38 52 38 C60 38 66 42 72 46 C72 32 66 18 50 18 Z' fill='%23134e4a'/><path d='M22 88 C26 66 40 62 50 62 C60 62 74 66 78 88 Z' fill='%230d9488'/></svg>" alt="Cliente">
+                  </div>
+                </div>
+                <div class="insta-user-info">
+                  <div class="insta-username">@artes_••••••••</div>
+                  <div class="insta-status">Ativa há 3 h</div>
+                </div>
+                <div class="insta-header-actions">
+                  <i class="fas fa-phone-alt"></i>
+                  <i class="fas fa-video"></i>
+                  <i class="fas fa-info-circle"></i>
+                </div>
+              </div>
+              <div class="insta-body">
+                <div class="insta-date-pill">Ontem às 14:05</div>
+                <div class="insta-msg incoming">
+                  Oie! Passando pra elogiar a organização dos arquivos. Eu não tenho computador em casa, faço tudo pelo celular e tinha medo de não conseguir abrir o PDF ou mandar imprimir. Foi super fácil, baixei na hora e mandei direto pro Wi-Fi da impressora!
+                  <span class="insta-reaction">❤️</span>
+                </div>
+                <div class="insta-msg outgoing">
+                  Que maravilha! A gente preparou tudo pensando em quem usa direto pelo celular pra ser bem rápido e sem estresse! 🥰
+                </div>
+                <div class="insta-msg incoming">
+                  Nossa, nota mil! A caixinha sextavada e a sacolinha natalina com as tags ficaram um encanto! Já passei a indicação da página pra duas amigas que também fazem artesanato ❤️
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 Duplicado -->
+            <div class="insta-card">
+              <div class="insta-header">
+                <i class="fas fa-chevron-left insta-back-icon"></i>
+                <div class="insta-avatar-wrapper">
+                  <div class="insta-avatar">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23fef3c7'/><circle cx='50' cy='40' r='18' fill='%23fcd34d'/><path d='M50 18 C34 18 28 32 28 48 C36 44 44 38 52 38 C60 38 66 42 72 48 C72 32 64 18 50 18 Z' fill='%2378350f'/><path d='M22 88 C26 66 40 62 50 62 C60 62 74 66 78 88 Z' fill='%23d97706'/></svg>" alt="Cliente">
+                  </div>
+                </div>
+                <div class="insta-user-info">
+                  <div class="insta-username">@doces_••••••••</div>
+                  <div class="insta-status">Ativa ontem</div>
+                </div>
+                <div class="insta-header-actions">
+                  <i class="fas fa-phone-alt"></i>
+                  <i class="fas fa-video"></i>
+                  <i class="fas fa-info-circle"></i>
+                </div>
+              </div>
+              <div class="insta-body">
+                <div class="insta-date-pill">Segunda às 16:50</div>
+                <div class="insta-msg incoming">
+                  Gente, vocês não têm noção do alívio! Tô desempregada desde agosto e tava desesperada sem saber como comprar os presentes dos meus filhos esse ano. Vi o anúncio de vocês e comprei com o último dinheirinho que tinha.
+                  <span class="insta-reaction">❤️</span>
+                </div>
+                <div class="insta-msg outgoing">
+                  Poxa vida... e me conta, conseguiu montar os primeiros modelos? Como foi a reação das pessoas? ✨
+                </div>
+                <div class="insta-msg incoming">
+                  Montei 6 caixinhas com sabonetes e bombons, mostrei no grupo do condomínio e vendi TODAS em 20 minutos! Já comprei mais folha e tô com lista de espera pra entrega de dezembro. Vocês não venderam só moldes, trouxeram esperança pra minha família de verdade 🥺❤️🎅
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /.insta-marquee-set 2 -->
+
+        </div><!-- /.insta-marquee-track -->
+      </div><!-- /.insta-marquee-wrapper -->
+
+      <div class="page-width">
+        <p class="insta-pause-note">
+          <i class="fab fa-instagram"></i> Toque ou passe o mouse sobre qualquer mensagem para pausar a rolagem
+        </p>
+
+        <!-- Botão logo abaixo dos depoimentos -->
+        <div class="hero-buy-action" style="margin-top: 24px;">
+          <a href="#oferta" class="purchase-button" data-scroll-offer>
+            QUERO COMEÇAR A PRODUZIR E LUCRAR HOJE
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
     <!-- 5. DORES E IDENTIFICAÇÃO ("SE VOCÊ JÁ PASSOU POR ISSO...") -->
     <section class="section section-tint">
       <div class="page-width">
@@ -277,6 +762,44 @@
       </div>
     </section>
 
+    <!-- 6.1 ANCORAGEM DE LUCRO E RENDA EXTRA NO NATAL -->
+    <section class="profit-section">
+      <div class="page-width">
+        <div class="profit-calculator-card">
+          <div style="text-align: center;">
+            <span class="profit-badge"><i class="fas fa-chart-line"></i> Matemática da Renda Extra</span>
+            <h2 class="section-title" style="margin-bottom: 8px;">Por que este kit se paga já no primeiro dia?</h2>
+            <p class="section-subtitle" style="margin-bottom: 20px;">Veja como confeiteiras e artesãs estão lucrando alto vendendo caixinhas montadas:</p>
+          </div>
+
+          <div class="profit-grid">
+            <div class="profit-step">
+              <span class="profit-step-num">Passo 1 • Custo</span>
+              <div class="profit-step-val cost">~R$ 1,20</div>
+              <p class="profit-step-desc">Custo médio de 1 folha A4 impressa (papel fotográfico ou offset).</p>
+            </div>
+
+            <div class="profit-step">
+              <span class="profit-step-num">Passo 2 • Venda</span>
+              <div class="profit-step-val sell">R$ 15 a R$ 25</div>
+              <p class="profit-step-desc">Preço médio de venda da caixinha com doces, bombons ou sabonete.</p>
+            </div>
+
+            <div class="profit-step">
+              <span class="profit-step-num">Passo 3 • Lucro</span>
+              <div class="profit-step-val gain">+R$ 13 a R$ 20</div>
+              <p class="profit-step-desc">Lucro limpo em cada unidade vendida para vizinhos, amigos e clientes.</p>
+            </div>
+          </div>
+
+          <div class="profit-conclusion-box">
+            <i class="fas fa-coins" style="color: #16a34a; font-size: 1.2rem; margin-right: 6px;"></i>
+            <strong>Resultado Real:</strong> Vendendo <strong>apenas 1 ou 2 caixinhas</strong>, você já recupera os R$ 9,90 ou R$ 19,90 investidos no kit. Todas as próximas são <strong>100% de lucro no seu bolso!</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- 7. SEÇÃO DE OFERTA COMERCIAL - DOIS PLANOS -->
     <section class="section section-tint-alt" id="oferta">
       <div class="page-width">
@@ -308,36 +831,42 @@
           <!-- Plano Básico — R$ 9,90 -->
           <div class="offer-plan-card">
             <div class="offer-plan-name">Coleção Básica</div>
-            <div class="offer-plan-price-label">por apenas</div>
+            <div class="offer-plan-price-label">Para quem quer apenas testar</div>
             <div class="offer-plan-price">R$ <span>9,90</span></div>
             <ul class="offer-plan-items">
               <li><i class="fas fa-check-circle"></i> Seleção de moldes natalinos em formato A4</li>
               <li><i class="fas fa-check-circle"></i> Modelos de caixas de doces e porta mimos</li>
               <li><i class="fas fa-check-circle"></i> Fácil de recortar com tesoura comum</li>
               <li><i class="fas fa-check-circle"></i> Envio automático por e-mail após pagamento</li>
+              <li class="negative-item"><i class="fas fa-times-circle"></i> Sem pack de fotos para divulgação</li>
+              <li class="negative-item"><i class="fas fa-times-circle"></i> Sem tags natalinas adicionais</li>
+              <li class="negative-item"><i class="fas fa-times-circle"></i> Sem guia de impressão econômica</li>
             </ul>
             <a href="#checkout" class="purchase-button purchase-button--outline" data-buy-btn data-plan="basic">
-              COMPRAR POR R$ 9,90
+              COMPRAR BÁSICO POR R$ 9,90
               <i class="fas fa-arrow-right"></i>
             </a>
             <span class="offer-guarantee-note"><i class="fas fa-lock"></i> Pagamento único • Acesso imediato</span>
           </div>
 
-          <!-- Plano Completo — R$ 19,90 (destaque) -->
+          <!-- Plano Completo — R$ 19,90 (destaque com bônus) -->
           <div class="offer-plan-card featured">
-            <div class="offer-plan-badge">⭐ MAIS COMPLETO</div>
-            <div class="offer-plan-name">Coleção Completa</div>
-            <div class="offer-plan-price-label">por apenas</div>
+            <div class="offer-plan-badge">🔥 ESCOLHA DE 94% DAS ARTESÃS (MAIS COMPLETO)</div>
+            <div class="offer-plan-name">Coleção Completa VIP</div>
+            <div class="offer-plan-price-label">Melhor Custo-Benefício por apenas</div>
             <div class="offer-plan-price">R$ <span>19,90</span></div>
             <ul class="offer-plan-items">
-              <li><i class="fas fa-check-circle"></i> Todos os moldes temáticos em formato A4</li>
-              <li><i class="fas fa-check-circle"></i> Caixas, envelopes com visor, cintas e porta mimos</li>
-              <li><i class="fas fa-check-circle"></i> Fácil de recortar com tesoura comum</li>
+              <li><i class="fas fa-check-circle"></i> <strong>Todos os 10 Moldes Exclusivos</strong> em formato A4</li>
+              <li><i class="fas fa-check-circle"></i> Caixas Bis, Envelopes com Visor, Cintas de Panetone e Porta-Mimos</li>
+              <li><i class="fas fa-check-circle"></i> Fácil de recortar na tesoura comum (sem máquinas caras)</li>
               <li><i class="fas fa-check-circle"></i> Imprima quantas vezes quiser em casa ou na gráfica</li>
-              <li><i class="fas fa-check-circle"></i> Envio automático por e-mail após pagamento</li>
+              <li class="bonus-item"><i class="fas fa-gift"></i> <span><strong>BÔNUS 1:</strong> Pack de Fotos Reais em Alta Resolução (para divulgar no WhatsApp/Instagram e vender antes de imprimir)</span></li>
+              <li class="bonus-item"><i class="fas fa-book"></i> <span><strong>BÔNUS 2:</strong> Guia Rápido de Papéis e Impressão Caseira Econômica</span></li>
+              <li class="bonus-item"><i class="fas fa-tags"></i> <span><strong>BÔNUS 3:</strong> Coleção de Tags e Adesivos Natalinos ("De: / Para:")</span></li>
+              <li><i class="fas fa-bolt"></i> <strong>Acesso Vitalício Imediato</strong> por e-mail</li>
             </ul>
             <a href="#checkout" class="purchase-button" data-buy-btn data-plan="full">
-              COMPRAR POR R$ 19,90
+              QUERO A COLEÇÃO COMPLETA — R$ 19,90
               <i class="fas fa-arrow-right"></i>
             </a>
             <span class="offer-guarantee-note"><i class="fas fa-lock"></i> Pagamento único • Acesso imediato</span>
@@ -454,11 +983,11 @@
       <div class="page-width">
         <span class="eyebrow">Última Chance</span>
         <h2 class="section-title" style="margin-bottom: 12px;">Garanta sua coleção de Natal antes de sair</h2>
-        <p class="section-subtitle" style="margin-bottom: 24px;">A partir de R$ 9,90 com acesso imediato e garantia de 7 dias.</p>
+        <p class="section-subtitle" style="margin-bottom: 24px;">Acesso imediato no seu e-mail com garantia incondicional de 7 dias.</p>
         
         <!-- Botão 4: Fechamento Final (Rola até a oferta) -->
         <a href="#oferta" class="purchase-button" data-scroll-offer>
-          QUERO MINHAS CAIXINHAS — VER PLANOS
+          QUERO MINHAS CAIXINHAS DE NATAL
           <i class="fas fa-arrow-right"></i>
         </a>
       </div>
@@ -477,7 +1006,7 @@
     <div class="mobile-sticky-cta" id="mobileStickyCta">
       <div class="mobile-sticky-cta-inner">
         <a href="#oferta" class="purchase-button" data-scroll-offer>
-          VER PLANOS — A PARTIR DE R$ 9,90
+          QUERO MINHAS CAIXINHAS DE NATAL
           <i class="fas fa-arrow-right"></i>
         </a>
       </div>

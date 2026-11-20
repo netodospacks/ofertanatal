@@ -107,6 +107,66 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // 5. Proteção Anti-Cópia e Bloqueio de Inspeção
+  // Desativa menu de contexto (botão direito)
+  document.addEventListener("contextmenu", (e) => e.preventDefault());
+
+  // Desativa atalhos de desenvolvedor (F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C, Ctrl+U, Ctrl+S)
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "F12" || e.keyCode === 123) {
+      e.preventDefault();
+      return false;
+    }
+    if (e.ctrlKey && e.shiftKey && ["I", "i", "J", "j", "C", "c"].includes(e.key)) {
+      e.preventDefault();
+      return false;
+    }
+    if (e.ctrlKey && (e.key === "U" || e.key === "u")) {
+      e.preventDefault();
+      return false;
+    }
+    if (e.ctrlKey && (e.key === "S" || e.key === "s")) {
+      e.preventDefault();
+      return false;
+    }
+  });
+
+  // Desativa arrastar elementos e copiar texto
+  document.addEventListener("dragstart", (e) => e.preventDefault());
+  document.addEventListener("copy", (e) => e.preventDefault());
+  document.addEventListener("cut", (e) => e.preventDefault());
+
+  // 6. Bloqueio de Zoom (Mobile e Desktop)
+  // Previne gesto de pinça (pinch-to-zoom multi-touch)
+  document.addEventListener("touchstart", (e) => {
+    if (e.touches.length > 1) {
+      e.preventDefault();
+    }
+  }, { passive: false });
+
+  document.addEventListener("touchmove", (e) => {
+    if (e.touches.length > 1) {
+      e.preventDefault();
+    }
+  }, { passive: false });
+
+  // Previne zoom por duplo toque rápido
+  let lastTouchEndTime = 0;
+  document.addEventListener("touchend", (e) => {
+    const now = Date.now();
+    if (now - lastTouchEndTime <= 300) {
+      e.preventDefault();
+    }
+    lastTouchEndTime = now;
+  }, false);
+
+  // Previne zoom por Ctrl + Scroll do mouse no Desktop
+  document.addEventListener("wheel", (e) => {
+    if (e.ctrlKey) {
+      e.preventDefault();
+    }
+  }, { passive: false });
 });
 
 // Modal elegante caso o checkout esteja pendente
