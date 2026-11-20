@@ -1808,18 +1808,143 @@ button {
   color: #16a34a;
 }
 
-/* Responsivo — mobile: empilha os cards */
+/* Responsivo — mobile: ofertas lado a lado (2 colunas) para 9,90 e 19,90 visíveis juntas */
 @media (max-width: 600px) {
+  #oferta .page-width {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .offer-section-header {
+    margin-bottom: 16px;
+  }
+
+  .offer-ribbon {
+    font-size: 0.68rem;
+    padding: 3px 10px;
+  }
+
+  .offer-box-title {
+    font-size: 1.25rem;
+    margin: 6px 0 4px;
+  }
+
+  .offer-box-subtitle {
+    font-size: 0.78rem;
+  }
+
+  .offer-preview-row {
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+
   .offer-plans-grid {
-    grid-template-columns: 1fr;
-    max-width: 400px;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+    max-width: 100% !important;
+    margin: 0 auto 18px !important;
+    padding: 0 !important;
+    align-items: stretch;
+  }
+
+  .offer-plan-card {
+    padding: 22px 6px 14px !important;
+    border-radius: 14px !important;
+    border-width: 1.5px !important;
   }
 
   .offer-plan-card.featured {
-    order: -1; /* Destaque aparece primeiro no mobile */
+    order: initial !important; /* Mantém a de 9,90 à esquerda e a de 19,90 ao lado */
+    border-width: 2px !important;
+  }
+
+  .offer-plan-badge {
+    position: absolute;
+    top: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.52rem !important;
+    padding: 3px 6px !important;
+    white-space: normal !important;
+    text-align: center;
+    width: 92% !important;
+    max-width: 135px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+    border-radius: 6px;
+  }
+
+  .offer-plan-name {
+    font-size: 0.88rem !important;
+    margin-top: 4px;
+    margin-bottom: 2px;
+    line-height: 1.2;
+  }
+
+  .offer-plan-price-label {
+    font-size: 0.60rem !important;
+    letter-spacing: 0.01em;
+    margin-bottom: 2px;
+    line-height: 1.15;
+  }
+
+  .offer-plan-price {
+    font-size: 1.05rem !important;
+    margin: 0 0 10px !important;
   }
 
   .offer-plan-price span {
-    font-size: 2.2rem;
+    font-size: 1.65rem !important;
+  }
+
+  .offer-plan-items {
+    margin: 0 0 12px !important;
+    padding: 0;
+  }
+
+  .offer-plan-items li {
+    font-size: 0.69rem !important;
+    padding: 4px 0 !important;
+    gap: 4px !important;
+    line-height: 1.25;
+  }
+
+  .offer-plan-items li i {
+    font-size: 0.65rem !important;
+    margin-top: 2px;
+  }
+
+  .offer-plan-items li.bonus-item {
+    padding: 4px 5px !important;
+    margin-bottom: 4px !important;
+    font-size: 0.66rem !important;
+    border-radius: 6px;
+    line-height: 1.2;
+  }
+
+  .offer-plan-card .purchase-button {
+    font-size: 0.68rem !important;
+    padding: 9px 4px !important;
+    border-radius: 8px !important;
+    letter-spacing: 0 !important;
+    line-height: 1.2;
+    min-height: auto !important;
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 3px;
+  }
+
+  .offer-plan-card .purchase-button i {
+    font-size: 0.60rem !important;
+  }
+
+  .offer-guarantee-note {
+    font-size: 0.58rem !important;
+    margin-top: 6px;
+    line-height: 1.15;
   }
 }
